@@ -38,5 +38,13 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "card",
+      "text",
+      "quote"
+    ]
   }
 ]
