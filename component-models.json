@@ -217,7 +217,7 @@
         "component": "select",
         "name": "title",
         "value": "",
-        "label": "Title",
+        "label": "Title Type",
         "description": "",
         "valueType": "string",
         "options": [
