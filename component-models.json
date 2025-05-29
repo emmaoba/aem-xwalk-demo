@@ -209,5 +209,31 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id": "nikonHero",
+    "fields": [
+      {
+        "component": "text-area",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text",
+        "value": ""
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
   }
 ]
