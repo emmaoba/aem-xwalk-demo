@@ -215,7 +215,7 @@
     "fields": [
       {
         "component": "select",
-        "name": "title",
+        "name": "titleType",
         "value": "",
         "label": "Title Type",
         "description": "",
