@@ -1,56 +1,72 @@
 {
-    "definitions": [
-      {
-        "title": "Nikon Hero",
-        "id": "nikonHero",
-        "plugins": {
-          "xwalk": {
-            "page": {
-              "resourceType": "core/franklin/components/block/v1/block",
-              "template": {
-                "name": "Nikon Hero",
-                "model": "nikonHero"
-              }
+  "definitions": [
+    {
+      "title": "Nikon Hero",
+      "id": "nikonHero",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Nikon Hero",
+              "model": "nikonHero"
             }
           }
         }
       }
-    ],
-    "models": [
-      {
-        "id": "nikonHero",
-        "fields": [
-          {
-            "component": "text-area",
-            "valueType": "string",
-            "name": "text",
-            "label": "Text",
-            "value": ""
-          },
-          {
-            "component": "text-input",
-            "valueType": "string",
-            "name": "title",
-            "label": "Title",
-            "value": ""
-          },
-          {
+    }
+  ],
+  "models": [
+    {
+      "id": "nikonHero",
+      "fields": [
+        {
+          "component": "select",
+          "name": "title",
+          "value": "",
+          "label": "Title",
+          "description": "",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "H1",
+              "value": "h1"
+            },
+            {
+              "name": "H2",
+              "value": "h2"
+            },
+            {
+              "name": "H3",
+              "value": "h3"
+            },
+            {
+              "name": "H4",
+              "value": "h3"
+            }
+          ]
+        },
+        {
+          "component": "text-area",
+          "valueType": "string",
+          "name": "text",
+          "label": "Text",
+          "value": ""
+        },
+        {
           "component": "reference",
           "valueType": "string",
           "name": "image",
           "label": "Image",
           "multi": false
         }
-        ]
-      }
-    ],
-    "filters": [
-      {
-        "id": "section",
-        "components": [
-          "nikonHero"
-        ]
-      }
-    ]
-  }
-  
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "section",
+      "components": ["nikonHero"]
+    }
+  ]
+}
