@@ -44,7 +44,8 @@
     "components": [
       "card",
       "text",
-      "quote"
+      "quote",
+      "nikonHero"
     ]
   }
 ]
