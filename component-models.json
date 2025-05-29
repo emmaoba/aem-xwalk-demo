@@ -215,10 +215,9 @@
     "fields": [
       {
         "component": "select",
-        "name": "headingLevel",
+        "name": "classes",
         "value": "",
         "label": "Heading Level",
-        "description": "",
         "valueType": "string",
         "options": [
           {
