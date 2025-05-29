@@ -22,9 +22,9 @@
       "fields": [
         {
           "component": "select",
-          "name": "titleType",
+          "name": "classes",
           "value": "",
-          "label": "Title Type",
+          "label": "Heading Level",
           "valueType": "string",
           "options": [
             {
