@@ -25,6 +25,12 @@
     left: 0;
     bottom: -8px;
     height: 5px;
-    width: 30px;
+    width: 50px;
     background-color: darkgray;
+}
+
+.quote-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
