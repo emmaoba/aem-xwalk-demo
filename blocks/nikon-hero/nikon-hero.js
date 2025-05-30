@@ -1,4 +1,20 @@
+import { createOptimizedPicture } from '../../scripts/aem.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
+
 export default function decorate(block) {
+    domManulation(block);
+    appendHeading(block);
+}
+
+function domManulation(block) {
+    const [titleWrapper, textWrapper] = block.children;
+    const paragraphs = textWrapper.querySelector('p');
+    titleWrapper.querySelector('div').appendChild(paragraphs);
+    // Pタグ移動後の空のdivを削除
+    textWrapper.remove();
+}
+
+function appendHeading(block) {
     const [headingLevelWrapper] = document.querySelector('.nikon-hero-wrapper').children;
     let headingLevel;
 
@@ -14,10 +30,7 @@ export default function decorate(block) {
     else if(headingLevelWrapper.className.includes('h4')) {
         headingLevel = 'h4';
     }
-    appendHeading(block, headingLevel);
-}
-
-function appendHeading(block, headingLevel) {
+    
     const [titleWrapper] = block.children;
     // Hタグを作成
     const heading = document.createElement(headingLevel);
