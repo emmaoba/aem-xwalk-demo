@@ -17,7 +17,6 @@ function domManulation(block) {
     imageWrapper.className = 'nikon-hero__image';
     // 不要Divタグの処理
     const picture = imageWrapper.querySelector('div > picture');
-    console.log(picture);
     imageWrapper.appendChild(picture);
     imageWrapper.querySelector('div').remove();
 }
@@ -51,5 +50,3 @@ function appendHeading(block) {
     //既存のPタグをHタグに置き換える
     pTag.replaceWith(heading);
 }
-
-
