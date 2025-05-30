@@ -1,1 +1,5 @@
-
+.nikon-hero {
+  display: flex;
+  align-items: center; /* 縦方向の中央揃え */
+  gap: 20px; /* テキストと画像の間にスペースを空ける */
+}
