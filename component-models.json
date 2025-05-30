@@ -260,5 +260,24 @@
         "multi": false
       }
     ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
