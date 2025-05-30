@@ -1,5 +1,41 @@
 .nikon-hero {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.nikon-hero > div:first-child {
   display: flex;
+  padding: 32px;
   align-items: center; /* 縦方向の中央揃え */
-  gap: 20px; /* テキストと画像の間にスペースを空ける */
+  justify-content: center;
+  background-color: #F3F3F3;
+  height: auto;
+}
+
+.nikon-hero > .nikon-hero__text > div> p{
+  margin-top: 20px;
+}
+
+.nikon-hero > .nikon-hero__image img{
+  height: 100%;
+}
+
+/* モバイル・タブレット（縦並び、画像先） */
+@media (max-width: 1024px) {
+  .nikon-hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nikon-hero > div:first-child {
+    order: 2; /* テキストを後に */
+  }
+
+  .nikon-hero > .nikon-hero__image {
+    order: 1; /* 画像を先に */
+  }
+
+  .nikon-hero > .nikon-hero__image img {
+    width: 100%;
+    height: 100%;
+  }
 }
