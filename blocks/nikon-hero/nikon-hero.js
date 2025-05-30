@@ -2,16 +2,24 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
+
     domManulation(block);
     appendHeading(block);
 }
 
 function domManulation(block) {
-    const [titleWrapper, textWrapper] = block.children;
+    const [titleWrapper, textWrapper, imageWrapper] = block.children;
     const paragraphs = textWrapper.querySelector('p');
     titleWrapper.querySelector('div').appendChild(paragraphs);
     // Pタグ移動後の空のdivを削除
     textWrapper.remove();
+    titleWrapper.className = 'nikon-hero__text';
+    imageWrapper.className = 'nikon-hero__image';
+    // 不要Divタグの処理
+    const picture = imageWrapper.querySelector('div > picture');
+    console.log(picture);
+    imageWrapper.appendChild(picture);
+    imageWrapper.querySelector('div').remove();
 }
 
 function appendHeading(block) {
@@ -43,3 +51,5 @@ function appendHeading(block) {
     //既存のPタグをHタグに置き換える
     pTag.replaceWith(heading);
 }
+
+
